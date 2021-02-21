@@ -258,8 +258,22 @@ const gameSelections = (() =>{
 
         //  minmax();
   }
+  const playerTwoAI = (gameChoices) =>{
+    // console.log("Problem?");
+    let squareLocation =document.querySelectorAll('.squaresXO') ;
+    let bestSpot=minmaxTwo(gameChoices,ai);
+    console.log(bestSpot);
+    gameChoices[bestSpot.index]="O";
+    squareLocation[bestSpot.index].innerHTML="O";
+         checkWinner.checksForWins();
+
+        //  minmax();
+  }
   const human ="O";
 const ai = "X";
+
+const humanTwo="X";
+const aiTwo ="O";
 
 let scores = {
   'X' : 10,
@@ -267,8 +281,7 @@ let scores = {
   'tie': 0
 }
 
-//delete this and replace with reg board after
-// const origBoard = ["X","X",2,3,4,5,6,7,"X"];
+
 
 const winning =(gameChoices, player)=>{
   if (
@@ -285,6 +298,71 @@ const winning =(gameChoices, player)=>{
   } else {
   return false;
 }
+}
+
+const minmaxTwo = (newBoard,player) =>{
+  newBoard = Array.from(newBoard);
+  let availSpots = emptyIndexies(newBoard);
+  if (winning(newBoard, aiTwo)){
+    return {score:-10};
+ }
+ else if (winning(newBoard, humanTwo)){
+   return {score:10};
+ }
+ else if ( availSpots.length === 0){
+   return {score:0};
+ }
+
+ var moves = [];
+
+ // loop through available spots
+ for (var i = 0; i <  availSpots.length; i++){
+   //create an object for each and store the index of that spot 
+   var move = {};
+   move.index = availSpots[i];
+
+   // set the empty spot to the current player
+   newBoard[availSpots[i]] = player;
+
+   /*collect the score resulted from calling minmax 
+     on the opponent of the current player*/
+   if (player == ai){
+     var result = minmax(newBoard, humanTwo);
+     move.score = result.score;
+   }
+   else{
+     var result = minmax(newBoard, aiTwo);
+     move.score = result.score;
+   }
+
+   // reset the spot to empty
+   newBoard[availSpots[i]] = move.index;
+   // push the object to the array
+   moves.push(move);
+ }
+ var bestMove;
+if(player === aiTwo){
+  var bestScore = -10000;
+  for(var i = 0; i < moves.length; i++){
+    if(moves[i].score > bestScore){
+      bestScore = moves[i].score;
+      bestMove = i;
+    }
+  }
+}else{
+
+// else loop over the moves and choose the move with the lowest score
+  var bestScore = 10000;
+  for(var i = 0; i < moves.length; i++){
+    if(moves[i].score < bestScore){
+      bestScore = moves[i].score;
+      bestMove = i;
+    }
+  }
+}
+
+// return the chosen move (object) from the moves array
+return moves[bestMove];
 }
 
   const minmax = (newBoard,player) =>{
@@ -355,6 +433,7 @@ let gameChoices = [" "," "," "," "," "," "," "," "," "];
 let currentPlayer;
 let isAIP1;
 let isAIP2;
+let tempBoard=[];
 
 const makeSquares = () =>{
   currentPlayer ="PlayerOne";
@@ -368,21 +447,34 @@ const makeSquares = () =>{
   
     squareLocation[i].innerHTML =gameChoices[i];
     if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="yes"){
-      if(currentPlayer=="PlayerOne"){
-           gameChoices[i] = "X";
-           currentPlayer = "PlayerTwo";
-            squareLocation[i].innerHTML = gameChoices[i]; 
-            checkWinner.checksForWins();
-    
+      while(tempBoard.length!=9){
+        console.log("Loops")
+        if(currentPlayer=="PlayerOne" ){
+          // bestMove();
+          randomSpot(gameChoices);
+        currentPlayer="PlayerTwo"
+         }
+
+         if(currentPlayer=="PlayerTwo"){
+          playerTwoAI(gameChoices);
+          currentPlayer = "PlayerOne";        
+          console.log('hand off to player One');
+          if(gameChoices[i]=="O"){
+            playerOneAI(gameChoices);
+            currentPlayer="PlayerTwo"
           }
-        
-          else if(currentPlayer=="PlayerTwo"){
-            gameChoices[i]= "O";
-            currentPlayer = "PlayerOne";
-            squareLocation[i].innerHTML = gameChoices[i]; 
-            checkWinner.checksForWins();
-    
           }
+
+           for(let i=0; i<gameChoices.length;i++){
+             if ((gameChoices[i]=="X")||(gameChoices[i]=="O")){
+              tempBoard.push(i);
+            }
+
+           }
+           console.log(tempBoard);
+          }
+    
+  
     }
     else if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="no"){
 
@@ -414,6 +506,26 @@ const makeSquares = () =>{
 }
 
     else if(PlayerOne.isAI=="no" && PlayerTwo.isAI=="yes"){
+      
+
+         addSquare.addEventListener('click',()=>{
+           if(gameChoices[i]==" "){
+         if(currentPlayer=="PlayerOne"){
+          gameChoices[i]= "X";
+          currentPlayer = "PlayeTwo";
+          squareLocation[i].innerHTML = gameChoices[i]; 
+          checkWinner.checksForWins();       
+          console.log('hand off to player One');
+          if(gameChoices[i]=="X"){
+            playerTwoAI(gameChoices);
+            currentPlayer="PlayerOne"
+          }
+          }
+           }   
+       
+    
+    })
+  
     }
     else if(PlayerOne.isAI=="no" && PlayerTwo.isAI=="no"){
     addSquare.addEventListener('click',()=>{
