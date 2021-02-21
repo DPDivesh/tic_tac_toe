@@ -5,110 +5,95 @@ const checkWinner = (()=>{
   let winCountPlayerTwo = 0;
   const checksForWins = () => {
     if(document.getElementById("textP1").innerHTML != PlayerOne.name +" Wins!" && document.getElementById("textP2").innerHTML != PlayerTwo.name +" Wins!" &&   document.getElementById("textP2").innerHTML !=" It's A Tie!"){
-      console.log('test')
+  
   let playerGameChoices = gameSelections.gameChoices;
-  console.log(playerGameChoices);
+  
 if(playerGameChoices[0]=="X"&& playerGameChoices[1]=="X"&& playerGameChoices[2]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+  
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[3]=="X"&& playerGameChoices[4]=="X"&& playerGameChoices[5]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
+  
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+  
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[6]=="X"&& playerGameChoices[7]=="X"&& playerGameChoices[8]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[0]=="X"&& playerGameChoices[3]=="X"&& playerGameChoices[6]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
+
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[1]=="X"&& playerGameChoices[4]=="X"&& playerGameChoices[7]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[2]=="X"&& playerGameChoices[5]=="X"&& playerGameChoices[8]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
+
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[0]=="X"&& playerGameChoices[4]=="X"&& playerGameChoices[8]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+  
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[2]=="X"&& playerGameChoices[4]=="X"&& playerGameChoices[6]=="X"){
-  console.log("Player One winsdasdsadas");
-  console.log(document.getElementById("textP1"));
   document.getElementById("textP1").innerHTML =PlayerOne.name +" Wins!";
   
   winCountPlayerOne = winCountPlayerOne+1;
-  console.log(winCountPlayerOne);
+  
   buttonsPushed.scoreCountOne.innerHTML = winCountPlayerOne; 
   displayController.onPlayerOne();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[0]=="O"&& playerGameChoices[1]=="O"&& playerGameChoices[2]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
+
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 1 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
@@ -116,98 +101,78 @@ else if(playerGameChoices[0]=="O"&& playerGameChoices[1]=="O"&& playerGameChoice
 }
 
 else if(playerGameChoices[3]=="O"&& playerGameChoices[4]=="O" && playerGameChoices[5]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
+
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 2 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[6]=="O" && playerGameChoices[7]=="O" && playerGameChoices[8]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
+  
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 3 P2");
+  
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[0]=="O"&& playerGameChoices[3]=="O" && playerGameChoices[6]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
+
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 4 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[1]=="O"&& playerGameChoices[4]=="O" && playerGameChoices[7]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
+ 
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
-  console.log(winCountPlayerTwo,"winCondition 5 P2");
+ 
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo);
+ 
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[2]=="O"&& playerGameChoices[5]=="O"&& playerGameChoices[8]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
-  document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
+   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 6 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[0]=="O"&& playerGameChoices[4]=="O"&& playerGameChoices[8]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 7 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 
   // gameFlow.playTheGame();
 }
 else if(playerGameChoices[2]=="O"&& playerGameChoices[4]=="O"&& playerGameChoices[6]=="O"){
-  console.log("Player Two winsdasdsadas");
-  console.log(document.getElementById("textP2"));
   document.getElementById("textP2").innerHTML =PlayerTwo.name +" Wins!";
   
   winCountPlayerTwo = winCountPlayerTwo+1;
-  console.log(winCountPlayerTwo,"winCondition 7 P2");
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 }
 else {
-  console.log(winCountPlayerTwo);
 for(let z=0, j=0; z < playerGameChoices.length; z++){
 if(playerGameChoices[z]!=" "){
   j=j+1;
-console.log(j);
 if(j == 9){
-  console.log("tie")
-  console.log(document.getElementById("textP2"));
   document.getElementById("textP2").innerHTML =" It's A Tie!";
-  console.log(winCountPlayerTwo);
   buttonsPushed.scoreCountTwo.innerHTML = winCountPlayerTwo; 
   displayController.onPlayerTwo();
 }
@@ -231,8 +196,7 @@ const displayController = (() =>{
  const resetGame =()=>{
   for(let i=8; i >= 0;i--){
     let temp = document.querySelectorAll(".squaresXO");
-    // temp.remove(i);
-    console.log(temp[i].remove());
+    temp[i].remove();
     gameSelections.gameChoices[i]=' ';
     }
     document.getElementById("textP1").innerHTML =" ";
@@ -269,44 +233,42 @@ return{
 };
 })();
 
+
+function emptyIndexies(board){
+  let tempBoard=[ ];
+  for(let i=0; i<board.length;i++){
+    if (board[i]==" "){
+      tempBoard.push(i);
+    }
+
+  }
+  return tempBoard;
+}
+
 const gameSelections = (() =>{
   const playerOneAI = (gameChoices) =>{
-    console.log("Problem?")
-         randomSpot(gameChoices);
+    // console.log("Problem?");
+    let squareLocation =document.querySelectorAll('.squaresXO') ;
+    let bestSpot=minmax(gameChoices,ai);
+    console.log(bestSpot);
+    gameChoices[bestSpot.index]="X";
+    squareLocation[bestSpot.index].innerHTML="X";
          checkWinner.checksForWins();
-         minmax();
+         currentPlayer="PlayerTwo"  
 
+        //  minmax();
   }
-
-  const bestMove = ()=>{
-    let bestScore = -Infinity;
-    let move;
-    for(let i=0; i < 8;i++){
-      console.log(i);
-      if (gameChoices[i] == " "){
-        gameChoices[i] = "X";
-        let score = minmax(gameChoices,0, false);
-        gameChoices[i] =" ";
-       if(score > bestScore){
-         bestScore = score;
-        console.log(move ={i});
-       }          
-      }
-  }
-  console.log("YAYAYAY")
-  gameChoices[move.i]="X";
-}
-const human ="O";
+  const human ="O";
 const ai = "X";
 
 let scores = {
   'X' : 10,
   'O' : -10,
-  'tie':0
+  'tie': 0
 }
 
 //delete this and replace with reg board after
-const origBoard = ["O",1,"X","X",4,"X",6,"O","O"];
+// const origBoard = ["X","X",2,3,4,5,6,7,"X"];
 
 const winning =(gameChoices, player)=>{
   if (
@@ -325,42 +287,69 @@ const winning =(gameChoices, player)=>{
 }
 }
 
-  const minmax = (gameChoices,depth,isMaximizing) =>{
-    let result =checkWinners();
-    console.log(result)
-    if(result!=null){
-      console.log("Done");
-      return scores[result];
+  const minmax = (newBoard,player) =>{
+    newBoard = Array.from(newBoard);
+    let availSpots = emptyIndexies(newBoard);
+    if (winning(newBoard, human)){
+      return {score:-10};
+   }
+   else if (winning(newBoard, ai)){
+     return {score:10};
+   }
+   else if ( availSpots.length === 0){
+     return {score:0};
+   }
 
-    }
-    if (isMaximizing){
-      let bestScore = -Infinity;
-      for(let i=0; i < 8;i++){
-        if (gameChoices[i] == " "){
-          gameChoices[i] = "X";
-          let score = minmax(gameChoices,depth+1, false);
-          gameChoices[i] =" ";
-          bestScore = Math.max(score,bestScore)          
-        }
-    }
-    return bestScore;
-  }
-  else{
-    let bestScore = Infinity;
-    for(let i=0; i < 8;i++){
-      console.log("loop");
-      if (gameChoices[i] == " "){
-        gameChoices[i] = "O";
-        console.log(gameChoices);
-        let score = minmax(gameChoices,depth+1, false);
-        gameChoices[i] =" ";
-        bestScore = Math.min(score,bestScore)
+   var moves = [];
 
-        
+   // loop through available spots
+   for (var i = 0; i <  availSpots.length; i++){
+     //create an object for each and store the index of that spot 
+     var move = {};
+     move.index = availSpots[i];
+ 
+     // set the empty spot to the current player
+     newBoard[availSpots[i]] = player;
+ 
+     /*collect the score resulted from calling minmax 
+       on the opponent of the current player*/
+     if (player == ai){
+       var result = minmax(newBoard, human);
+       move.score = result.score;
+     }
+     else{
+       var result = minmax(newBoard, ai);
+       move.score = result.score;
+     }
+ 
+     // reset the spot to empty
+     newBoard[availSpots[i]] = move.index;
+     // push the object to the array
+     moves.push(move);
+   }
+   var bestMove;
+  if(player === ai){
+    var bestScore = -10000;
+    for(var i = 0; i < moves.length; i++){
+      if(moves[i].score > bestScore){
+        bestScore = moves[i].score;
+        bestMove = i;
       }
+    }
+  }else{
+
+// else loop over the moves and choose the move with the lowest score
+    var bestScore = 10000;
+    for(var i = 0; i < moves.length; i++){
+      if(moves[i].score < bestScore){
+        bestScore = moves[i].score;
+        bestMove = i;
+      }
+    }
   }
-  return bestScore;
-  }
+
+// return the chosen move (object) from the moves array
+  return moves[bestMove];
 }
 let gameChoices = [" "," "," "," "," "," "," "," "," "];
 let currentPlayer;
@@ -376,8 +365,7 @@ const makeSquares = () =>{
     addSquare.innerHTML = gameChoices[i];
     makeGameSquares.append(addSquare);
     let squareLocation =document.querySelectorAll('.squaresXO') ;
-    console.log(document.querySelectorAll('.squaresXO'));
-    console.log(document.getElementById("ticTacToeZone").childNodes)
+  
     squareLocation[i].innerHTML =gameChoices[i];
     if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="yes"){
       if(currentPlayer=="PlayerOne"){
@@ -397,15 +385,12 @@ const makeSquares = () =>{
           }
     }
     else if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="no"){
-      console.log("Called",currentPlayer,"Gameselect.",currentPlayer,"currentplayer");
 
-      console.log("call")
-        console.log("test",currentPlayer, squareLocation.length,"Length");
         if(9 <= squareLocation.length){
       if(currentPlayer=="PlayerOne" ){
-        bestMove();
+        // bestMove();
+        randomSpot(gameChoices);
       currentPlayer="PlayerTwo"
-console.log(currentPlayer);
        }
       }
        addSquare.addEventListener('click',()=>{
@@ -413,19 +398,16 @@ console.log(currentPlayer);
        if(currentPlayer=="PlayerTwo"){
         gameChoices[i]= "O";
         currentPlayer = "PlayerOne";
-        console.log("test",currentPlayer);
         squareLocation[i].innerHTML = gameChoices[i]; 
-        
-        checkWinner.checksForWins();
-        console.log(currentPlayer);
-        if(currentPlayer=="PlayerOne"){
-          bestMove();
-          currentPlayer=="PlayerTwo"
-          console.log(currentPlayer)
+        checkWinner.checksForWins();       
+        console.log('hand off to player One');
+        if(gameChoices[i]=="O"){
+          playerOneAI(gameChoices);
+          currentPlayer="PlayerTwo"
         }
         }
          }   
-         console.log(currentPlayer);
+     
   
   })
 
@@ -435,7 +417,6 @@ console.log(currentPlayer);
     }
     else if(PlayerOne.isAI=="no" && PlayerTwo.isAI=="no"){
     addSquare.addEventListener('click',()=>{
-      console.log(gameChoices[i]);
       if(gameChoices[i]==" "){
       
           // console.log("Player One yes", PlayerOne.isAI);
@@ -458,7 +439,6 @@ console.log(currentPlayer);
     
           // }
       if(currentPlayer=="PlayerOne"){
-        console.log(isAIP1);
         gameChoices[i] = "X";
         currentPlayer = "PlayerTwo";
         squareLocation[i].innerHTML = gameChoices[i]; 
@@ -485,14 +465,12 @@ const randomSpot =(gameArray)=>{
   let z = Math.round(Math.random()*(8-0)+0);
   
   let squareLocation = document.querySelectorAll('.squaresXO');
-  console.log(currentPlayer)
      while( currentPlayer=="PlayerOne"){
     if(gameArray[z]==" "){
   
          gameArray[z]="X";
          squareLocation[z].innerHTML ="X"; 
        currentPlayer="PlayerTwo"  
-         console.log(currentPlayer);      
   
        }
        else{
@@ -507,11 +485,10 @@ const randomSpot =(gameArray)=>{
      }
 
 return{
-gameChoices,
+gameChoices,minmax,
 makeSquares,isAIP1,isAIP2,currentPlayer,playerOneAI
 }
 })();
-
 
 
 //gameboard module
@@ -560,12 +537,10 @@ const buttonsPushed = (() =>{
       for (let i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {
           // do whatever you want with the checked radio
-          console.log(radios.value);
           if(radios[i].value=="yes"){
             holdPlayerName = document.getElementById("playerOneName").value;
             currentPlayerName =holdPlayerName + " "+ " AI";
             gameSelections.isAIP1 = "yes";
-            console.log(gameSelections.isAIP1,"isAIP1")
           }
           else{
              currentPlayerName = document.getElementById("playerOneName").value;
@@ -573,7 +548,6 @@ const buttonsPushed = (() =>{
 
           }
 
-      console.log(currentPlayer);
           // only one radio can be logically checked, don't check the rest
           break;
         }
@@ -582,9 +556,7 @@ const buttonsPushed = (() =>{
 
 
     if(currentPlayerName != "" ||currentPlayerName != undefined){
-    console.log("default prevented");
     PlayerOne =gamePlayers(currentPlayerName,gameSelections.isAIP1);
-    console.log(PlayerOne.name);
     document.getElementById("player1").innerHTML=PlayerOne.name;
     let setPlayerOne = document.getElementById("player1");
 
@@ -592,7 +564,6 @@ const buttonsPushed = (() =>{
     setPlayerOne.style.fontSize ="3vw";
 
     scoreCountOne.classList.add("scoreCount");
-    console.log(checkWinner.winCountPlayerOne);
     scoreCountOne.innerHTML = checkWinner.winCountPlayerOne; 
     scoreOne.appendChild(scoreCountOne);
     gameFlow.startPlayerPreReq();
@@ -608,27 +579,22 @@ const buttonsPushed = (() =>{
     for (let i = 0, length = radios.length; i < length; i++) {
       if (radios[i].checked) {
         // do whatever you want with the checked radio
-        console.log(radios.value);
         if(radios[i].value=="yes"){
           holdPlayerName = document.getElementById("playerTwoName").value;
           currentPlayerName =holdPlayerName + " "+ " AI";
           gameSelections.isAIP2 = "yes";
-          console.log(gameSelections.isAIP2,"isAIP2")
         }
         else{
            currentPlayerName = document.getElementById("playerTwoName").value;
            gameSelections.isAIP2 = "no";
 
         }
-    console.log(currentPlayer);
         // only one radio can be logically checked, don't check the rest
         break;
       }
     }
 
     if(currentPlayerName != "" || currentPlayerName != undefined){
-    console.log("default prevented");
-    console.log(e.currentTarget);
     PlayerTwo = gamePlayers(currentPlayerName,gameSelections.isAIP2);
     document.getElementById("player2").innerHTML=PlayerTwo.name;
     let setPlayerTwo = document.getElementById("player2");
@@ -638,10 +604,9 @@ const buttonsPushed = (() =>{
 
     
     scoreCountTwo.classList.add("scoreCount");
-    console.log(checkWinner.winCountPlayerTwo);
     scoreCountTwo.innerHTML = checkWinner.winCountPlayerTwo; 
     scoreTwo.appendChild(scoreCountTwo);
-    console.log(PlayerTwo.name);
+
     gameFlow.startPlayerPreReq();
     }
     
@@ -661,12 +626,10 @@ const buttonsPushed = (() =>{
 //factory Function to make players
 const gamePlayers = (name,isAI) =>{
   isAI;
-  console.log(isAI);
   name;
   // playerNumber;
 
   gameFlow.numberOfPlayers.push(name);
-  console.log(gameFlow.numberOfPlayers.length);
 
   
   return{
