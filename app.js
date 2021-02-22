@@ -303,10 +303,10 @@ const winning =(gameChoices, player)=>{
 const minmaxTwo = (newBoard,player) =>{
   newBoard = Array.from(newBoard);
   let availSpots = emptyIndexies(newBoard);
-  if (winning(newBoard, aiTwo)){
+  if (winning(newBoard, humanTwo)){
     return {score:-10};
  }
- else if (winning(newBoard, humanTwo)){
+ else if (winning(newBoard, aiTwo)){
    return {score:10};
  }
  else if ( availSpots.length === 0){
@@ -326,12 +326,12 @@ const minmaxTwo = (newBoard,player) =>{
 
    /*collect the score resulted from calling minmax 
      on the opponent of the current player*/
-   if (player == ai){
-     var result = minmax(newBoard, humanTwo);
+   if (player == aiTwo){
+     var result = minmaxTwo(newBoard, humanTwo);
      move.score = result.score;
    }
    else{
-     var result = minmax(newBoard, aiTwo);
+     var result = minmaxTwo(newBoard, aiTwo);
      move.score = result.score;
    }
 
@@ -446,23 +446,20 @@ const makeSquares = () =>{
     let squareLocation =document.querySelectorAll('.squaresXO') ;
   
     squareLocation[i].innerHTML =gameChoices[i];
-    if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="yes"){
+    if(PlayerOne.isAI=="yes" && PlayerTwo.isAI=="yes" && squareLocation.length==9){
+      randomSpot(gameChoices);
+      currentPlayer="PlayerTwo"
       while(tempBoard.length!=9){
         console.log("Loops")
         if(currentPlayer=="PlayerOne" ){
           // bestMove();
-          randomSpot(gameChoices);
+          playerOneAI(gameChoices);
+
         currentPlayer="PlayerTwo"
          }
-
-         if(currentPlayer=="PlayerTwo"){
-          playerTwoAI(gameChoices);
-          currentPlayer = "PlayerOne";        
-          console.log('hand off to player One');
-          if(gameChoices[i]=="O"){
-            playerOneAI(gameChoices);
-            currentPlayer="PlayerTwo"
-          }
+         if( currentPlayer =="PlayerTwo"){
+            playerTwoAI(gameChoices);
+            currentPlayer="PlayerOne"
           }
 
            for(let i=0; i<gameChoices.length;i++){
